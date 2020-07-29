@@ -61,7 +61,7 @@ body::after {
     z-index: -1;
     background-color: hsl(270, 20%, 96%);
     border-radius: 0px 0px 425px 425px;
-    transform: rotate(180deg) translate(-45%);
+    transform: rotate(180deg) translate(-40%);
 }
 
 
@@ -74,7 +74,7 @@ body::after {
     overflow: hidden;
     position: relative;
     box-shadow: 10px 5px 50px hsl(270, 7%, 64%);
-    left: 65px;
+    left: 50px;
     top: 50px;
     bottom: 80px;
 }
@@ -237,7 +237,7 @@ body::after {
 
 .price-quote {
     display: flex;
-    width: 78%;
+    width: 75%;
     border: none;
     border-radius: 10px 10px 10px 5px;
     background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
@@ -317,7 +317,7 @@ body::after {
 }
 
 .app-intro {
-    max-width: 35%;
+    max-width: 33%;
     left: 20px;
 }
 
