@@ -1,117 +1,357 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="index.css">
-</head>
-
-<body>
+/* 
+-- Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+-- Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+-- Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+-- Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+-- Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+-- Dark Grayish Violet (paragraph): hsl(270, 7%, 64%) */
 
 
-  <div class="phone-group">
-    <span class="speaker"></span>
-    <div class="dropdown">
-      <div class="back-arrow"></div>
-      <img src="images/avatar.jpg" alt="User's avatar" class="avatar">
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;700&display=swap');
 
-      <div class="app-header">
-        <div class="user-name">Samuel Green</div>
-        <p class="user-status">
-          Available to Walk
-        </p>
-      </div>
-      <div class="menu-dots">
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-      </div>
-    </div>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'rubik', sans-serif;
+
+}
+.attribution {
+    font-size: 12px;
+    margin-top: 25px;
+    text-align: start;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  
+body {
+    font-size: 12px;
+    margin:  0;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: 300px;
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:450px;
+    height: 700px;
+    z-index: -1;
+    background-image: linear-gradient(160deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 0px 0px 425px 425px;
+    transform: translateX(-35%);
+}
+body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width:450px;
+    height: 700px;
+    z-index: -1;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 0px 0px 425px 425px;
+    transform: rotate(180deg) translate(-65%);
+}
 
 
-    <div class="message-bubbles">
-      <div class="user-message 1">
-        That sounds great. I’d be happy with that.
-      </div>
+.phone-group {
+    height: 615px;
+    width: 320px;
+    background-color: hsl(270, 20%, 96%);
+    border: solid hsl(0, 0%, 100%) 15px;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 5px 50px hsl(270, 7%, 64%);
+    left: 65px;
+    top: 50px;
+    bottom: 80px;
+}
 
-      <div class="user-message 2">
-        Could you send over some pictures of your dog, please?
-      </div>
 
-      <span class="dog-pics">
-        <img src="images/dog-image-1.jpg" alt="...">
-        <img src="images/dog-image-2.jpg" alt="...">
-        <img src="images/dog-image-3.jpg" alt="...">
+.dropdown {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 45px 20px 20px 20px;
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 0px 0px 10px 10px;
+   
+}
 
-      </span>
+.speaker {
+    position: absolute;
+    justify-content: space-around;
+    width: 160px;
+    height:20px;
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    margin-left: 25%;
+}
 
-      <div class="client-message 1">
-        Here are a few pictures. She’s a happy girl!
-      </div>
+.back-arrow {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    transform: rotate(50deg); 
+    border-radius: 20px;
+}
 
-      <div class="client-message-2">
-        Can you make it?
-      </div>
+.back-arrow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: hsl(0, 0%, 100%);
+    height: 2px;
+    width: 100%;
+    border-radius: 20px;
+    transform: rotate(0deg);
+}
 
-      <<<<<<< HEAD <div class="user-message 3">
-        She looks so happy! The time we discussed works. How long shall I take her out for?
-    </div>
+.back-arrow::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: hsl(0, 0%, 100%);
+    width: 2px;
+    height: 100%;
+    border-radius: 20px;
+}
 
-    =======
-    <div class="text-field">
-      <p class="placeholder">
-        Type a message…
-      </p>
-      >>>>>>> testing file
+.avatar {
+    border-radius: 50%;
+    border: solid rgba(255, 255, 255, 0.432) 2.5px; 
+    width: 35px;
+    margin: 0px 5px;
+}
 
-      <div class="price-quote 1">
-        <span class="circle"></span>
-        <span class="walk-length">30 minute walk</span>
-        <span class="cost">$29</span>
-      </div>
+.app-header {
+    margin-left: 10px;
+}
+.user-name {
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
 
-      <div class="price-quote 2">
-        <span class="circle"></span>
-        <span class="walk-length">1 hour walk</span>
-        <span class="cost">$49</span>
-      </div>
+.user-status {
+    color: rgba(255, 255, 255, 0.445);
+    font-size: 10px;
+    margin-top: 0px;  
+}
 
-      <div class="text-field">
+.menu-dots {
+    margin-left:auto;
+}
 
-        <p class="placeholder">
-          Type a message…
-        </p>
+.menu-dots span {
+    display: flex;
+    position:relative;
+    align-content: space-between;
+    margin-top: 2px;
+    border: solid 0px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    height: 2.5px;
+    width: 2.5px;
+}
 
-        <div class="send-button">
-          <div class="send-button-arrow"></div>
-        </div>
+.message-bubbles {
+    width: 100%;
+    padding: 10px;
+}
 
-      </div>
-    </div>
-  </div>
+.dog-pics {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0px 10px 85px;  
+}
 
-  <div class="app-intro">
+.dog-pics img {
+    width: 28%;
+    border-radius: 10px;
+    margin-left: 10px;
+   }
 
-    <h2>Simple booking</h2>
+.user-message {
+    width:55%;
+    border: none 0px;
+    border-radius: 11px 11px 11px 4px;
+    background-color: rgba(229, 180, 247, 0.2);
+    color: hsl(276, 55%, 52%);
+    padding: 8px 10px 8px 8px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    font-size: 9.5px;
+    }
 
-    <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
-      discuss arrangements and make bookings. Once the walk has been completed you can rate
-      your walker and book again all through the chat.</p>
+.client-message {
+    width: 58%;
+    margin-left: auto;
+    color: hsl(271, 15%, 43%);
+    border: none 0px;
+    border-radius: 11px 11px 3px 11px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 8px 6px 8px 10px;
+    margin-bottom: 10px;
+    font-size: 10px;   
+    box-shadow: 5px 5px 5px hsl(270, 7%, 64%, 0.15);
+}
 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.linkedin.com/in/rmlink">Ryan Molyneaux</a>.
-    </div>
-  </div>
+.client-message-2 {
+    width: 36%;
+    margin-left: auto;
+    color: hsl(271, 15%, 43%);
+    border: none 0px;
+    border-radius: 11px 11px 3px 11px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 8px 6px 8px 10px;
+    margin-bottom: 10px;
+    font-size: 10px; 
+    box-shadow: 5px 5px 5px hsl(270, 7%, 64%, 0.15); 
+}
 
-</body>
+.circle {
+    border: solid hsl(0, 0%, 100%, 0.3) 1.5px ;
+    background-color: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
 
-</html>
+.price-quote {
+    display: flex;
+    justify-content: flex-start;
+    width: 78%;
+    border: none;
+    border-radius: 10px 10px 10px 5px;
+    background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 10px;
+    margin-bottom: 10px;
+    color: hsl(0, 0%, 100%);
+}
+
+.walk-length {
+    font-weight: 100;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.cost {
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.text-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 0px 5px;
+    background-color: hsl(0, 0%, 100%);
+    }
+
+.placeholder {
+    font-size: 12px;
+    margin-left: 25px;
+    margin-top: 0px;
+}
+
+.send-button {
+    border-radius: 50%;
+    background-color: hsl(271, 36%, 24%);
+    height: 30px;
+    width: 30px;
+    margin: 5px 2px;
+}
+
+.send-button-arrow {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    transform: rotate(225deg); 
+    border-radius: 20px;
+    margin-top: 11px;
+    margin-left: 8px;
+}
+
+.send-button-arrow::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    width: 100%;
+    border-radius: 20px;
+    transform: rotate(0deg);
+}
+
+.send-button-arrow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    width: 2px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.app-intro {
+    max-width: 35%;
+}
+
+@media screen and (max-width: 838px){
+    body{
+        overflow-y: auto;
+    }
+    .app-intro {
+        margin: 20px;
+        text-align: center;
+    }
+    body::before{
+        background-image: linear-gradient(  to top,  rgba(226, 226, 226, 0.164) , hsl(0, 0%, 100%));
+    }
+    .app-intro p{
+        color: grey;
+        font-size: 16px;
+    }
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+
+}
+
+p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.8;
+    margin-top: 20px;
+
+}
