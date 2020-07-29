@@ -1,30 +1,117 @@
-/* 
--- Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
--- Moderate Violet (chat on the left): hsl(276, 55%, 52%)
--- Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
--- Grayish Blue (placeholder text): hsl(206, 6%, 79%)
--- Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
--- Dark Grayish Violet (paragraph): hsl(270, 7%, 64%) */
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
 
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+  <div class="phone-group">
+    <span class="speaker"></span>
+    <div class="dropdown">
+      <div class="back-arrow"></div>
+      <img src="images/avatar.jpg" alt="User's avatar" class="avatar">
 
-h1 {
-    font-family: 'Rubik', sans-serif;
-    color: hsl(271, 36%, 24%);
-}
+      <div class="app-header">
+        <div class="user-name">Samuel Green</div>
+        <p class="user-status">
+          Available to Walk
+        </p>
+      </div>
+      <div class="menu-dots">
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+      </div>
+    </div>
 
-p {
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    color: hsl(270, 7%, 64%);
-}
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+    <div class="message-bubbles">
+      <div class="user-message 1">
+        That sounds great. I’d be happy with that.
+      </div>
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+      <div class="user-message 2">
+        Could you send over some pictures of your dog, please?
+      </div>
+
+      <span class="dog-pics">
+        <img src="images/dog-image-1.jpg" alt="...">
+        <img src="images/dog-image-2.jpg" alt="...">
+        <img src="images/dog-image-3.jpg" alt="...">
+
+      </span>
+
+      <div class="client-message 1">
+        Here are a few pictures. She’s a happy girl!
+      </div>
+
+      <div class="client-message-2">
+        Can you make it?
+      </div>
+
+      <<<<<<< HEAD <div class="user-message 3">
+        She looks so happy! The time we discussed works. How long shall I take her out for?
+    </div>
+
+    =======
+    <div class="text-field">
+      <p class="placeholder">
+        Type a message…
+      </p>
+      >>>>>>> testing file
+
+      <div class="price-quote 1">
+        <span class="circle"></span>
+        <span class="walk-length">30 minute walk</span>
+        <span class="cost">$29</span>
+      </div>
+
+      <div class="price-quote 2">
+        <span class="circle"></span>
+        <span class="walk-length">1 hour walk</span>
+        <span class="cost">$49</span>
+      </div>
+
+      <div class="text-field">
+
+        <p class="placeholder">
+          Type a message…
+        </p>
+
+        <div class="send-button">
+          <div class="send-button-arrow"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="app-intro">
+
+    <h2>Simple booking</h2>
+
+    <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
+      discuss arrangements and make bookings. Once the walk has been completed you can rate
+      your walker and book again all through the chat.</p>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.linkedin.com/in/rmlink">Ryan Molyneaux</a>.
+    </div>
+  </div>
+
+</body>
+
+</html>
